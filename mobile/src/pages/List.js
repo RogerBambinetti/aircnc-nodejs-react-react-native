@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, AsyncStorage, Image, StyleSheet } from 'react-native';
+import { View, ScrollView, SafeAreaView, Text, AsyncStorage, Image, StyleSheet } from 'react-native';
+import SpotList from '../components/SpotList';
 
 import logo from '../assets/logo.png';
 import api from '../services/api';
@@ -14,21 +15,22 @@ export default function List() {
         });
     }, []);
 
-    return <View style={styles.container}>
+    return <ScrollView style={styles.container}>
         <Image source={logo} style={styles.logo}></Image>
-    </View>
+        {techs.map(tech => <SpotList key={tech} tech={tech} />)}
+    </ScrollView>
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#F2F2F2'
     },
     logo: {
         height: 35,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        alignSelf: 'center',
+        marginTop: 30
     },
     form: {
         alignSelf: 'stretch',

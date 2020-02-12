@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#F2F2F2'
     },
     logo: {
-        width: 160,
         height: 50,
-        resizeMode: 'stretch'
+        resizeMode: 'contain',
+        alignSelf: 'center'
     },
     form: {
         alignSelf: 'stretch',
