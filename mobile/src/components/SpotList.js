@@ -25,7 +25,7 @@ function SpotList({ tech, navigation }) {
     }
 
     return <View style={styles.container}>
-        <Text style={styles.title}>Empresas que usam {tech}</Text>
+        <Text style={styles.title}>Companys that use {tech}</Text>
         <FlatList style={styles.list}
             data={spots}
             keyExtractor={spot => spot._id}
@@ -35,8 +35,8 @@ function SpotList({ tech, navigation }) {
                 <View style={styles.listItem}>
                     <Image style={styles.thumbnail} source={{ uri: item.thumbnail_url }} />
                     <Text style={styles.company}>{item.company}</Text>
-                    <Text style={styles.price}>{item.price ? `R$: ${item.price}/dia` : 'gratuito'}</Text>
-                    <TouchableOpacity style={styles.button} onPress={() => handleNavigate(item._id)}><Text style={styles.buttonText}>Solicitar reserva</Text></TouchableOpacity>
+                    <Text style={styles.price}>{item.price ? `R$: ${item.price}/day` : 'free'}</Text>
+                    <TouchableOpacity style={styles.button} onPress={() => handleNavigate(item._id)}><Text style={styles.buttonText}>Request booking</Text></TouchableOpacity>
                 </View>
             )} />
     </View>
