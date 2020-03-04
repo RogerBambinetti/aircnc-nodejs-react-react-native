@@ -16,7 +16,7 @@ export default function List() {
             })
 
             socket.on('booking_response', booking => {
-                Alert.alert(`You booking in ${booking.spot.company} was ${booking.approved ? 'approved' : 'rejected'}`)
+                Alert.alert(`Your booking in ${booking.spot.company} was ${booking.approved ? 'approved' : 'rejected'}`)
             })
         });
     }, []);
