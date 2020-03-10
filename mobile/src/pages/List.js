@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import socketio from 'socket.io-client';
-import { View,Alert, ScrollView, SafeAreaView, Text, AsyncStorage, Image, StyleSheet } from 'react-native';
+import { View, Alert, ScrollView, TouchableOpacity, Text, AsyncStorage, Image, StyleSheet } from 'react-native';
 import SpotList from '../components/SpotList';
 
 import logo from '../assets/logo.png';
 import api from '../services/api';
 
-export default function List() {
+export default function List({navigation}) {
     const [techs, setTechs] = useState([]);
 
     useEffect(() => {
@@ -28,8 +28,13 @@ export default function List() {
         });
     }, []);
 
+    async function handleLogout() {
+        await AsyncStorage.clear();
+        navigation.navigate('Login');
+    }
+
     return <ScrollView style={styles.container}>
-        <Image source={logo} style={styles.logo}></Image>
+        <TouchableOpacity onPress={handleLogout} ><Image style={styles.logo} source={logo} /></TouchableOpacity>
         {techs.map(tech => <SpotList key={tech} tech={tech} />)}
     </ScrollView>
 }

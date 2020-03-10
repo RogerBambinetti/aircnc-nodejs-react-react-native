@@ -25,7 +25,7 @@ function SpotList({ tech, navigation }) {
     }
 
     return <View style={styles.container}>
-        <Text style={styles.title}>Companys that use {tech}</Text>
+        <Text style={styles.title}>Companys using {tech}</Text>
         <FlatList style={styles.list}
             data={spots}
             keyExtractor={spot => spot._id}
@@ -58,13 +58,18 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     listItem: {
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        padding: 10,
+        backgroundColor:'#fff',
+        borderRadius: 4,
+        elevation: 1
     },
     thumbnail: {
         width: 200,
         height: 120,
         resizeMode: 'cover',
-        backgroundColor: '#FFF'
+        backgroundColor: '#FFF',
+        borderRadius: 4
     },
     company: {
         fontSize: 24,
@@ -74,15 +79,15 @@ const styles = StyleSheet.create({
     },
     price: {
         fontSize: 15,
-        color: '#999',
-        marginTop: 5
+        color: '#999'
     },
     button: {
         height: 35,
         borderRadius: 4,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ff5a5f'
+        backgroundColor: '#ff5a5f',
+        marginTop: 10
     },
 
     buttonText: {

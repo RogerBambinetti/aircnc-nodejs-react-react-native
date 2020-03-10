@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, KeyboardAvoidingView, AsyncStorage, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, AsyncStorage, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import logo from '../assets/logo.png';
 import api from '../services/api';
@@ -18,15 +18,15 @@ export default function Login({ navigation }) {
     }, []);
 
     async function handleSubmit() {
-        const response = await api.post('sessions', { email });
+        const response = await api.post('sessions', { email: email.toLowerCase() });
         const { _id } = response.data;
         await AsyncStorage.setItem('user', _id);
-        await AsyncStorage.setItem('techs', techs);
+        await AsyncStorage.setItem('techs', techs.toLowerCase());
 
         navigation.navigate('List');
     }
 
-    return <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    return <View behavior="padding" style={styles.container}>
         <Image source={logo} style={styles.logo} />
         <View style={styles.form}>
             <Text style={styles.label}>YOUR E-EMAIL *</Text>
@@ -35,7 +35,7 @@ export default function Login({ navigation }) {
             <TextInput style={styles.input} value={techs} onChangeText={setTechs} placeholder="Techs" placeholderTextColor="#999" />
             <TouchableOpacity style={styles.button} onPress={handleSubmit}><Text style={styles.buttonText}>Enter</Text></TouchableOpacity>
         </View>
-    </KeyboardAvoidingView>
+    </View>
 }
 
 const styles = StyleSheet.create({
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#F2F2F2'
     },
     logo: {
-        height: 50,
+        height: 40,
         resizeMode: 'contain',
         alignSelf: 'center'
     },
