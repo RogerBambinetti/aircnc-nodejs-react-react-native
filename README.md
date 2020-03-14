@@ -13,7 +13,7 @@
 <img
 		width="700"
 		alt="Capture 4"
-		src="https://github.com/RogerBambinetti/tindev-nodejs-reactjs-react-native/blob/master/preview/Screenshot0.png">
+		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/Screenshot0.png">
 </p>
 
 ## Visão geral
