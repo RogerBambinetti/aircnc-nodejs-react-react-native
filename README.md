@@ -25,6 +25,10 @@
 
 O projeto possui uma versão mobile, mas o layout responsivo da aplicação web também adequa-se a dispositivos móveis.
 
+<img
+		width="350"
+		alt="Capture 1"
+		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/Screenshot1.png">
 
 ## Contribuidores
 
