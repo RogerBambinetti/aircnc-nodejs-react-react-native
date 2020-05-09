@@ -2,8 +2,7 @@
 <h1 align="center">
 <img
 		width="200"
-		alt="Logo"
-		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/frontend/src/assets/logo.png">
+		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/logo.png">
 </h1>
 <h3 align="center">
 	Aircnc - NodeJS - ReactJS - React Native
@@ -12,7 +11,6 @@
 <p align="center">
 <img
 		width="700"
-		alt="Capture 4"
 		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/Screenshot0.png">
 </p>
 
@@ -28,7 +26,6 @@ O projeto possui uma versão mobile, mas o layout responsivo da aplicação web 
 <p align="center">
 <img
 		width="350"
-		alt="Capture 1"
 		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/Screenshot1.png">
 </p>
 
