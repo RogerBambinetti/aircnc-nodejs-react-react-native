@@ -13,7 +13,6 @@
 		width="700"
 		src="https://github.com/RogerBambinetti/aircnc-nodejs-reactjs-react-native/blob/master/preview/Screenshot0.png">
 </p>
-
 ## Visão geral
 
 **Este projeto, embasado em videoaulas disponibilizadas pela [RocketSeat](https://github.com/Rocketseat), foi desenvolvido para fins de aprendizagem.** 6 telas estão disponíveis, divididas entre o sistema web e mobile.
